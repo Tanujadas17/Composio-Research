@@ -1,0 +1,1468 @@
+[
+  {
+    "id": 1,
+    "name": "Salesforce",
+    "category": "CRM and Sales",
+    "hint": "salesforce.com",
+    "description": "Enterprise cloud customer relationship management and sales automation platform.",
+    "auth_methods": [
+      "OAuth2 (Web Server, JWT Bearer, Client Credentials)",
+      "Connected App Client Secret"
+    ],
+    "self_serve": "Self-Serve with Developer Edition (Free instant signup at developer.salesforce.com)",
+    "api_surface": "Extremely broad REST, SOAP, Bulk API 2.0, GraphQL, Streaming API; official Salesforce MCP integrations available",
+    "buildability_verdict": "Build Ready (Immediate Composio toolkit candidate; Developer Edition enables immediate sandbox development)",
+    "docs_url": "https://developer.salesforce.com/docs"
+  },
+  {
+    "id": 2,
+    "name": "HubSpot",
+    "category": "CRM and Sales",
+    "hint": "hubspot.com",
+    "description": "Inbound marketing, sales CRM, customer service, and content management suite.",
+    "auth_methods": [
+      "OAuth2 (Public/Private Apps)",
+      "Private App Access Tokens (Bearer)"
+    ],
+    "self_serve": "Self-Serve (Free developer account & test portals at developers.hubspot.com; legacy API keys deprecated in favor of Private App tokens)",
+    "api_surface": "Comprehensive REST API covering CRM objects, contacts, deals, webhooks, marketing events; Community & Composio MCP available",
+    "buildability_verdict": "Build Ready (Top-tier agent integration; instantaneous token generation via Private Apps)",
+    "docs_url": "https://developers.hubspot.com/docs/api/overview"
+  },
+  {
+    "id": 3,
+    "name": "Pipedrive",
+    "category": "CRM and Sales",
+    "hint": "pipedrive.com",
+    "description": "Pipeline-focused sales CRM designed for activity-based selling and deal tracking.",
+    "auth_methods": [
+      "OAuth2 (Marketplace Apps)",
+      "Personal API Token (Bearer / Query Param)"
+    ],
+    "self_serve": "Self-Serve (Free developer sandbox account via Marketplace or personal API token in standard trial)",
+    "api_surface": "Extensive REST v1 API covering deals, persons, activities, webhooks; OpenAPI 3.0 spec provided",
+    "buildability_verdict": "Build Ready (Low friction; personal API tokens allow zero-overhead developer toolkits)",
+    "docs_url": "https://developers.pipedrive.com/docs/api/v1"
+  },
+  {
+    "id": 4,
+    "name": "Attio",
+    "category": "CRM and Sales",
+    "hint": "attio.com",
+    "description": "Modern, highly customizable, real-time data-driven CRM built for startups and fast-moving teams.",
+    "auth_methods": [
+      "OAuth2",
+      "API Keys (Bearer token `attio_...`)"
+    ],
+    "self_serve": "Self-Serve (Free tier available; API keys generated directly in Workspace Settings > Developers)",
+    "api_surface": "Modern REST v2 API for custom objects, attributes, records, comments, and webhooks; OpenAPI spec supported",
+    "buildability_verdict": "Build Ready (Highly agent-friendly; modern schema architecture and fast self-serve API keys)",
+    "docs_url": "https://developers.attio.com/reference/overview"
+  },
+  {
+    "id": 5,
+    "name": "Twenty",
+    "category": "CRM and Sales",
+    "hint": "twenty.com (open-source CRM)",
+    "description": "Open-source, self-hostable CRM positioned as a modern alternative to Salesforce.",
+    "auth_methods": [
+      "API Key (Bearer)",
+      "JWT Bearer Token",
+      "OAuth2"
+    ],
+    "self_serve": "Self-Serve (Open source Apache 2.0; free cloud tier or local docker deploy with instant API keys)",
+    "api_surface": "Full REST and GraphQL API, OpenAPI/Swagger explorer, webhooks; highly hackable for LLM agents",
+    "buildability_verdict": "Build Ready (Zero gating; completely open-source and local-dev friendly for agent toolkits)",
+    "docs_url": "https://twenty.com/developers"
+  },
+  {
+    "id": 6,
+    "name": "Podio",
+    "category": "CRM and Sales",
+    "hint": "podio.com",
+    "description": "Citrix-owned modular workspace and custom CRM for collaboration and task management.",
+    "auth_methods": [
+      "OAuth2 (Server-side, Client-side, App Authentication, User Authentication)"
+    ],
+    "self_serve": "Self-Serve (Free developer account and API key creation directly in user settings)",
+    "api_surface": "Mature REST API covering workspaces, apps, items, files, comments; rate limit 1,000 requests/hour",
+    "buildability_verdict": "Build Ready (Older legacy XML/JSON REST architecture, but fully functional with standard OAuth2 / App auth)",
+    "docs_url": "https://podio.com/developer"
+  },
+  {
+    "id": 7,
+    "name": "Zoho CRM",
+    "category": "CRM and Sales",
+    "hint": "zoho.com/crm",
+    "description": "Comprehensive multichannel cloud CRM for lead management and automated sales pipelines.",
+    "auth_methods": [
+      "OAuth2 (Authorization Code, Self-Client Grant)"
+    ],
+    "self_serve": "Self-Serve (Zoho Developer Console provides free sandbox and Self-Client token generation)",
+    "api_surface": "Extensive REST API v2/v3/v6; multi-data center routing (US, EU, IN, CN, JP) introduces domain complexity",
+    "buildability_verdict": "Build Ready (Robust, but requires careful DC URL resolution e.g., zoho.com vs zoho.eu vs zoho.in)",
+    "docs_url": "https://www.zoho.com/crm/developer/docs/api/v6/"
+  },
+  {
+    "id": 8,
+    "name": "Close",
+    "category": "CRM and Sales",
+    "hint": "close.com",
+    "description": "Inside sales CRM featuring built-in calling, email sequences, and SMS automation.",
+    "auth_methods": [
+      "API Key (Basic Auth using API key as username)",
+      "OAuth2"
+    ],
+    "self_serve": "Self-Serve (14-day free trial allows immediate API key generation; no sales gate)",
+    "api_surface": "Clean REST API with comprehensive coverage of leads, contacts, opportunities, activities, and webhooks",
+    "buildability_verdict": "Build Ready (Extremely straightforward API key auth; ideal for agentic sales execution)",
+    "docs_url": "https://developer.close.com"
+  },
+  {
+    "id": 9,
+    "name": "Copper",
+    "category": "CRM and Sales",
+    "hint": "copper.com",
+    "description": "Google Workspace-native CRM tailored for relationship management and automated data entry.",
+    "auth_methods": [
+      "API Key + User Email (Header: `X-PW-AccessToken`, `X-PW-UserEmail`)",
+      "OAuth2"
+    ],
+    "self_serve": "Self-Serve (Free trial available; API keys generated via Settings > Integrations > API Keys)",
+    "api_surface": "REST API v1 covering leads, people, companies, opportunities, pipelines, activities, and webhooks",
+    "buildability_verdict": "Build Ready (Straightforward dual-header authentication; immediate toolkit support)",
+    "docs_url": "https://developer.copper.com"
+  },
+  {
+    "id": 10,
+    "name": "DealCloud",
+    "category": "CRM and Sales",
+    "hint": "api.docs.dealcloud.com",
+    "description": "Specialized investment banking and private equity CRM and deal pipeline management platform.",
+    "auth_methods": [
+      "OAuth2 (Client Credentials flow)",
+      "User Profile API Key (Enterprise-managed)"
+    ],
+    "self_serve": "Gated (Enterprise institutional sales gate; requires active enterprise contract and admin permission to enable API capabilities)",
+    "api_surface": "Documented REST API with per-client Swagger UI (`https://{host}/swagger`), OpenAPI spec, C#/Python SDKs",
+    "buildability_verdict": "Gated Credential Blocker (Cannot self-serve sandbox accounts; requires client-provided enterprise credentials or partnership)",
+    "docs_url": "https://api.docs.dealcloud.com"
+  },
+  {
+    "id": 11,
+    "name": "Zendesk",
+    "category": "Support and Helpdesk",
+    "hint": "zendesk.com",
+    "description": "Omnichannel customer service, ticketing, and support CRM platform.",
+    "auth_methods": [
+      "OAuth2",
+      "API Token (Basic Auth `user@example.com/token:TOKEN`)"
+    ],
+    "self_serve": "Self-Serve (Free developer account through Zendesk Developer Program or standard trial)",
+    "api_surface": "Massive REST API (Support, Chat, Talk, Guide, Sunshine), Webhooks, Zendesk Apps framework, existing MCP wrappers",
+    "buildability_verdict": "Build Ready (Proven Composio & MCP compatibility; rapid API token testing)",
+    "docs_url": "https://developer.zendesk.com/api-reference/"
+  },
+  {
+    "id": 12,
+    "name": "Intercom",
+    "category": "Support and Helpdesk",
+    "hint": "intercom.com",
+    "description": "AI-first customer service platform featuring live chat, proactive messaging, and ticketing.",
+    "auth_methods": [
+      "OAuth2",
+      "Access Token (Bearer token for private workspace apps)"
+    ],
+    "self_serve": "Self-Serve (Free Intercom Developer Workspace at developers.intercom.com with instant token generation)",
+    "api_surface": "Modern REST API v2.11 covering conversations, contacts, articles, tickets, data attributes, webhooks; existing MCP servers",
+    "buildability_verdict": "Build Ready (Zero-cost developer workspaces make this an immediate high-value agent toolkit)",
+    "docs_url": "https://developers.intercom.com/docs/references/rest-api/api.intercom.io/"
+  },
+  {
+    "id": 13,
+    "name": "Freshdesk",
+    "category": "Support and Helpdesk",
+    "hint": "freshdesk.com",
+    "description": "Cloud-based customer support software by Freshworks offering ticketing and help center management.",
+    "auth_methods": [
+      "API Key (Basic Auth)",
+      "OAuth2 (Freshworks App Marketplace)"
+    ],
+    "self_serve": "Self-Serve (Free plan available; API key visible immediately under Profile Settings)",
+    "api_surface": "Full REST API v2 for tickets, contacts, companies, conversations, solutions, webhooks",
+    "buildability_verdict": "Build Ready (Generous free tier with instantaneous API key generation makes toolkit creation effortless)",
+    "docs_url": "https://developers.freshdesk.com/api/"
+  },
+  {
+    "id": 14,
+    "name": "Front",
+    "category": "Support and Helpdesk",
+    "hint": "front.com",
+    "description": "Customer communication hub consolidating emails, SMS, and messaging channels into shared team inboxes.",
+    "auth_methods": [
+      "OAuth2",
+      "API Token (Bearer `front_...`)"
+    ],
+    "self_serve": "Self-Serve (Free trial or Developer Account upon request; API tokens generated in Settings > Developers)",
+    "api_surface": "Rich Core REST API for conversations, messages, channels, tags, analytics, and bi-directional webhooks",
+    "buildability_verdict": "Build Ready (Well-documented API with simple Bearer token authentication)",
+    "docs_url": "https://dev.frontapp.com/reference/introduction"
+  },
+  {
+    "id": 15,
+    "name": "Pylon",
+    "category": "Support and Helpdesk",
+    "hint": "usepylon.com",
+    "description": "Modern B2B customer operations and support platform built natively for Slack, Teams, email, and in-app chat.",
+    "auth_methods": [
+      "API Key (Bearer `pylon_...`)"
+    ],
+    "self_serve": "Paid / Sales Gated (Targeted at B2B high-growth companies; requires active workspace subscription to issue API keys in Settings)",
+    "api_surface": "Modern REST API covering issues, accounts, contacts, broadcast messages, and webhooks",
+    "buildability_verdict": "Build Ready (Technical surface is clean and ready, but requires active customer/demo account for keys)",
+    "docs_url": "https://docs.usepylon.com/reference/getting-started"
+  },
+  {
+    "id": 16,
+    "name": "LiveAgent",
+    "category": "Support and Helpdesk",
+    "hint": "liveagent.com",
+    "description": "Multichannel helpdesk and real-time live chat software with integrated call center capabilities.",
+    "auth_methods": [
+      "API Key (Header `apikey: KEY` or query parameter)"
+    ],
+    "self_serve": "Self-Serve (14-day free trial or free account tier; API keys generated directly in Configuration > System > API)",
+    "api_surface": "Extensive REST API v3 with interactive Swagger / OpenAPI specification for all help desk entities",
+    "buildability_verdict": "Build Ready (Complete OpenAPI v3 definition makes automated agent tool generation trivial)",
+    "docs_url": "https://support.liveagent.com/061754-LiveAgent-REST-API-v3"
+  },
+  {
+    "id": 17,
+    "name": "Plain",
+    "category": "Support and Helpdesk",
+    "hint": "plain.com",
+    "description": "Developer-first customer service platform featuring an API-first and headless support architecture.",
+    "auth_methods": [
+      "API Key (Bearer token `plainApiKey_...`)"
+    ],
+    "self_serve": "Self-Serve (Free tier available; signup with GitHub/Google and create workspace API keys in 30 seconds)",
+    "api_surface": "GraphQL API exclusively, backed by webhooks and rich TypeScript/Node/Python SDKs; highly structured schema",
+    "buildability_verdict": "Build Ready (One of the most developer-friendly support platforms; ideal for LLM function calling)",
+    "docs_url": "https://plain.com/docs/graphql-api"
+  },
+  {
+    "id": 18,
+    "name": "Help Scout",
+    "category": "Support and Helpdesk",
+    "hint": "helpscout.com",
+    "description": "Simplified customer service platform and shared inbox for growing businesses.",
+    "auth_methods": [
+      "OAuth2 (Client Credentials flow & Authorization Code flow)"
+    ],
+    "self_serve": "Self-Serve (Free trial available; create OAuth App in Your Profile > My Apps for client ID & secret)",
+    "api_surface": "Comprehensive Mailbox REST API v2 covering conversations, mailboxes, threads, customers, webhooks",
+    "buildability_verdict": "Build Ready (Clean OAuth2 Client Credentials flow enables effortless server-to-server toolkit operation)",
+    "docs_url": "https://developer.helpscout.com/mailbox-api/"
+  },
+  {
+    "id": 19,
+    "name": "Gorgias",
+    "category": "Support and Helpdesk",
+    "hint": "gorgias.com",
+    "description": "Ecommerce-focused customer service and helpdesk platform deeply integrated with Shopify and BigCommerce.",
+    "auth_methods": [
+      "API Key (Basic Auth: Email + API Key)",
+      "OAuth2"
+    ],
+    "self_serve": "Self-Serve (Free trial available; API key accessible in Settings > You > REST API)",
+    "api_surface": "Comprehensive REST API for tickets, messages, customers, macros, satisfaction surveys, and ecommerce widgets",
+    "buildability_verdict": "Build Ready (Basic auth with API keys provides instant self-serve toolkit prototyping)",
+    "docs_url": "https://developers.gorgias.com/reference/introduction"
+  },
+  {
+    "id": 20,
+    "name": "Gladly",
+    "category": "Support and Helpdesk",
+    "hint": "gladly.com",
+    "description": "People-centered customer service platform unifying customer communication history across lifetime channels.",
+    "auth_methods": [
+      "API Token (Basic Auth using email + API Token)"
+    ],
+    "self_serve": "Gated (Enterprise sales gate; requires active Gladly enterprise contract and admin setup)",
+    "api_surface": "REST API covering Conversation, Customer, Organization, and Webhooks; comprehensive documentation",
+    "buildability_verdict": "Gated Credential Blocker (Cannot self-serve developer accounts without commercial engagement)",
+    "docs_url": "https://developer.gladly.com"
+  },
+  {
+    "id": 21,
+    "name": "Slack",
+    "category": "Communications and Messaging",
+    "hint": "slack.com",
+    "description": "Enterprise messaging, channel-based collaboration, and workflow automation platform.",
+    "auth_methods": [
+      "OAuth2",
+      "Bot / User Access Tokens (`xoxb-...`, `xoxp-...`)"
+    ],
+    "self_serve": "Self-Serve (Free workspace creation & free app creation at api.slack.com with instant token install)",
+    "api_surface": "Extremely broad Web API (REST), Events API, Socket Mode, Block Kit, official and community MCP servers",
+    "buildability_verdict": "Build Ready (Benchmark agent tool; immediate setup via Socket Mode or Bot tokens in Composio)",
+    "docs_url": "https://api.slack.com"
+  },
+  {
+    "id": 22,
+    "name": "Twilio",
+    "category": "Communications and Messaging",
+    "hint": "twilio.com",
+    "description": "Cloud communications platform for programmable SMS, voice, video, WhatsApp, and email APIs.",
+    "auth_methods": [
+      "HTTP Basic Auth (Account SID + Auth Token)",
+      "API Key & Secret"
+    ],
+    "self_serve": "Self-Serve (Free trial with credit card/phone verification at twilio.com)",
+    "api_surface": "Massive REST API surface across SMS, Voice, Verify, Conversations; comprehensive SDKs and OpenAPI specs",
+    "buildability_verdict": "Build Ready (Gold-standard developer API; instant trial credentials enable zero-barrier agent actions)",
+    "docs_url": "https://www.twilio.com/docs"
+  },
+  {
+    "id": 23,
+    "name": "Zoho Cliq",
+    "category": "Communications and Messaging",
+    "hint": "zoho.com/cliq",
+    "description": "Business communication and team chat tool with chat bots, kanban boards, and workflow shortcuts.",
+    "auth_methods": [
+      "OAuth2",
+      "Zoho Authtoken (User token)"
+    ],
+    "self_serve": "Self-Serve (Free plan available; build bots and access API via Zoho Developer Console)",
+    "api_surface": "REST API for channels, messages, chat history, bot webhooks, slash commands, and extensions",
+    "buildability_verdict": "Build Ready (Fully accessible free tier; standard Zoho OAuth2 architecture)",
+    "docs_url": "https://www.zoho.com/cliq/help/restapi/v2/"
+  },
+  {
+    "id": 24,
+    "name": "Lark (Larksuite)",
+    "category": "Communications and Messaging",
+    "hint": "open.larksuite.com",
+    "description": "Enterprise collaboration super-app (ByteDance) integrating chat, calendar, docs, sheets, and video calls.",
+    "auth_methods": [
+      "OAuth2 (tenant_access_token, user_access_token, app_access_token)"
+    ],
+    "self_serve": "Self-Serve (Free team account and instant developer portal app creation at open.larksuite.com)",
+    "api_surface": "Immense Open Platform REST API covering IM, Bitable (Airtable-like base), Docs, Calendar, Video, Approval",
+    "buildability_verdict": "Build Ready (Very powerful API surface; enterprise-grade self-serve developer portal)",
+    "docs_url": "https://open.larksuite.com/document"
+  },
+  {
+    "id": 25,
+    "name": "Pumble",
+    "category": "Communications and Messaging",
+    "hint": "pumble.com",
+    "description": "Affordable team messaging and collaboration app from the makers of Clockify.",
+    "auth_methods": [
+      "Bot Token (Bearer)",
+      "OAuth2",
+      "Incoming / Outgoing Webhooks"
+    ],
+    "self_serve": "Self-Serve (Free plan available; create Apps and bot tokens in Pumble Workspace Administration)",
+    "api_surface": "REST API for workspace messaging, channels, direct messages, bot posting, and webhooks",
+    "buildability_verdict": "Build Ready (Simple Slack-like REST endpoints with low authentication complexity)",
+    "docs_url": "https://pumble.com/help/integrations/pumble-api/"
+  },
+  {
+    "id": 26,
+    "name": "Discord",
+    "category": "Communications and Messaging",
+    "hint": "discord.com",
+    "description": "Community and gaming-focused voice, video, and text communication platform.",
+    "auth_methods": [
+      "Bot Token (Header `Authorization: Bot TOKEN`)",
+      "OAuth2 (User authorization)"
+    ],
+    "self_serve": "Self-Serve (Instant bot creation and token retrieval at discord.com/developers)",
+    "api_surface": "Extensive REST v10 API, Gateway WebSocket for real-time events, Slash Commands, interaction webhooks",
+    "buildability_verdict": "Build Ready (Instant bot token access makes Discord one of the fastest agent integrations to stand up)",
+    "docs_url": "https://discord.com/developers/docs/intro"
+  },
+  {
+    "id": 27,
+    "name": "Telegram",
+    "category": "Communications and Messaging",
+    "hint": "core.telegram.org",
+    "description": "Cloud-based mobile and desktop messaging app with extensive bot automation support.",
+    "auth_methods": [
+      "Bot Token (`https://api.telegram.org/bot<token>/METHOD`)",
+      "MTProto MTProto API ID/Hash"
+    ],
+    "self_serve": "Self-Serve (Instant bot token creation in 10 seconds via @BotFather in Telegram client)",
+    "api_surface": "Very broad Bot API (simple HTTP POST/GET), long polling & webhooks; full client MTProto API",
+    "buildability_verdict": "Build Ready (Fastest self-serve bot provisioning in the entire software ecosystem; zero blockers)",
+    "docs_url": "https://core.telegram.org/bots/api"
+  },
+  {
+    "id": 28,
+    "name": "WhatsApp Business",
+    "category": "Communications and Messaging",
+    "hint": "developers.facebook.com/docs/whatsapp",
+    "description": "Enterprise customer messaging platform allowing businesses to connect with WhatsApp users at scale.",
+    "auth_methods": [
+      "OAuth2 / System User Access Token (Bearer token in Meta Business Manager)"
+    ],
+    "self_serve": "Self-Serve Sandbox / Gated Production (Meta Developer Portal provides instant free sandbox test numbers; production requires Meta Business Verification & Phone Number ownership)",
+    "api_surface": "Cloud API (REST) hosted by Meta; message templates, media, webhooks, interactive messages",
+    "buildability_verdict": "Build Ready with Sandbox (Sandbox toolkits can be built immediately; live production requires business verification)",
+    "docs_url": "https://developers.facebook.com/docs/whatsapp/cloud-api"
+  },
+  {
+    "id": 29,
+    "name": "Aircall",
+    "category": "Communications and Messaging",
+    "hint": "aircall.io",
+    "description": "Cloud-based call center and phone system integrated with CRMs and helpdesk tools.",
+    "auth_methods": [
+      "HTTP Basic Auth (API ID + API Token)",
+      "OAuth2"
+    ],
+    "self_serve": "Self-Serve (Free trial available; API keys generated in Company Dashboard > Integrations > API Keys)",
+    "api_surface": "Clean REST API for calls, users, phone numbers, contacts, recordings, and webhook event streaming",
+    "buildability_verdict": "Build Ready (Simple Basic Auth and well-structured REST endpoints)",
+    "docs_url": "https://developer.aircall.io/api-references/"
+  },
+  {
+    "id": 30,
+    "name": "Vonage",
+    "category": "Communications and Messaging",
+    "hint": "developer.vonage.com",
+    "description": "Communications API platform (formerly Nexmo) for SMS, voice, video, and verification.",
+    "auth_methods": [
+      "API Key & Secret (Header / Query)",
+      "JWT Bearer Token (Private Key asymmetric signing)"
+    ],
+    "self_serve": "Self-Serve (Free developer account with instant test credits at dashboard.nexmo.com)",
+    "api_surface": "Extensive REST APIs for SMS, Voice, Messages (WhatsApp, Viber, FB), Verify, Webhooks",
+    "buildability_verdict": "Build Ready (Instant self-serve API credentials and comprehensive OpenAPI specifications)",
+    "docs_url": "https://developer.vonage.com"
+  },
+  {
+    "id": 31,
+    "name": "Google Ads",
+    "category": "Marketing, Ads, Email and Social",
+    "hint": "developers.google.com/google-ads",
+    "description": "Online advertising platform for Google Search, YouTube, Display Network, and Play Store.",
+    "auth_methods": [
+      "OAuth2 + Developer Token (Header: `developer-token`, `Authorization: Bearer`)"
+    ],
+    "self_serve": "Gated Developer Token (Developer token requires application & Google approval; Test Account access is self-serve, but Standard access requires audited business justification)",
+    "api_surface": "Enormous gRPC and REST APIs (Google Ads API v17+), Google Ads Query Language (GAQL)",
+    "buildability_verdict": "Gated Developer Token Blocker (High barrier to entry due to mandatory developer token audit; test accounts can build sandbox toolkits)",
+    "docs_url": "https://developers.google.com/google-ads/api/docs/first-call/overview"
+  },
+  {
+    "id": 32,
+    "name": "Meta Ads",
+    "category": "Marketing, Ads, Email and Social",
+    "hint": "developers.facebook.com/docs/marketing-apis",
+    "description": "Advertising platform across Facebook, Instagram, Messenger, and Audience Network.",
+    "auth_methods": [
+      "OAuth2 / System User Access Token (Bearer token)"
+    ],
+    "self_serve": "Self-Serve Sandbox / App Review Gated for Prod (Can create developer app and test ad accounts instantly; production access requires Meta App Review and Ads Management permission)",
+    "api_surface": "Massive Graph API (Marketing API v20+), campaigns, ad sets, creatives, custom audiences, reporting",
+    "buildability_verdict": "Partial / App Review Gated (Development mode allows immediate tool building; public multi-tenant apps require strict App Review)",
+    "docs_url": "https://developers.facebook.com/docs/marketing-apis"
+  },
+  {
+    "id": 33,
+    "name": "LinkedIn Ads",
+    "category": "Marketing, Ads, Email and Social",
+    "hint": "learn.microsoft.com/linkedin/marketing",
+    "description": "B2B professional targeted advertising platform across LinkedIn feeds and Sponsored InMail.",
+    "auth_methods": [
+      "OAuth2 (Authorization Code Flow)"
+    ],
+    "self_serve": "Gated Partner Program (Requires applying to LinkedIn Marketing Developer Platform; developer app creation is self-serve, but ad management scopes require partner approval)",
+    "api_surface": "RESTful LinkedIn Marketing API, Campaign Management, Analytics, Lead Gen Forms, Webhooks",
+    "buildability_verdict": "Partner Gated Blocker (Strict approval process prevents arbitrary developers from acquiring live ad management scopes)",
+    "docs_url": "https://learn.microsoft.com/en-us/linkedin/marketing/"
+  },
+  {
+    "id": 34,
+    "name": "GoHighLevel",
+    "category": "Marketing, Ads, Email and Social",
+    "hint": "highlevel.stoplight.io",
+    "description": "All-in-one white-label sales, marketing, and CRM platform built specifically for marketing agencies.",
+    "auth_methods": [
+      "OAuth2 (Marketplace Apps)",
+      "Location API Key (Legacy v1, Bearer)"
+    ],
+    "self_serve": "Self-Serve with Marketplace Developer Account (developers.gohighlevel.com provides free developer sandbox and OAuth credentials)",
+    "api_surface": "Comprehensive REST API v2 covering contacts, opportunities, calendars, conversations, funnels, webhooks",
+    "buildability_verdict": "Build Ready (V2 OAuth2 marketplace allows building agent tools; documentation hosted cleanly on Stoplight)",
+    "docs_url": "https://highlevel.stoplight.io"
+  },
+  {
+    "id": 35,
+    "name": "Mailchimp",
+    "category": "Marketing, Ads, Email and Social",
+    "hint": "mailchimp.com/developer",
+    "description": "Marketing automation and email marketing platform with audience segmentation tools.",
+    "auth_methods": [
+      "API Key (`KEY-usX` format specifying datacenter prefix)",
+      "OAuth2"
+    ],
+    "self_serve": "Self-Serve (Free tier available; API keys generated immediately under Profile > Extras > API keys)",
+    "api_surface": "Mature REST API v3 covering campaigns, lists/audiences, automations, templates, webhooks; OpenAPI spec",
+    "buildability_verdict": "Build Ready (Immediate toolkit creation; note datacenter URL requirement derived from API key suffix)",
+    "docs_url": "https://mailchimp.com/developer/marketing/api/"
+  },
+  {
+    "id": 36,
+    "name": "Klaviyo",
+    "category": "Marketing, Ads, Email and Social",
+    "hint": "developers.klaviyo.com",
+    "description": "Intelligent marketing automation and customer data platform specialized for ecommerce brands.",
+    "auth_methods": [
+      "Private API Key (Header `Authorization: Klaviyo-API-Key your-key`)",
+      "OAuth2"
+    ],
+    "self_serve": "Self-Serve (Free tier available; create API keys in Account > Settings > API Keys)",
+    "api_surface": "Modern REST API (revision-dated JSON:API standard e.g., `revision: 2024-10-15`), profiles, metrics, campaigns, flows",
+    "buildability_verdict": "Build Ready (Excellent developer documentation; revisioned JSON:API structure is very consistent)",
+    "docs_url": "https://developers.klaviyo.com/en/reference/api_overview"
+  },
+  {
+    "id": 37,
+    "name": "systeme.io",
+    "category": "Marketing, Ads, Email and Social",
+    "hint": "systeme.io (funnel builder)",
+    "description": "All-in-one marketing platform for sales funnels, email marketing, online courses, and affiliate management.",
+    "auth_methods": [
+      "API Key (Header `X-API-Key: YOUR_KEY`)"
+    ],
+    "self_serve": "Self-Serve (Free plan available; API keys generated directly in Profile Settings > Public API Keys)",
+    "api_surface": "REST API v1 covering contacts, tags, purchases, courses, and webhook event notifications",
+    "buildability_verdict": "Build Ready (Low-friction self-serve API key and simple REST endpoints)",
+    "docs_url": "https://systeme.io/api-doc"
+  },
+  {
+    "id": 38,
+    "name": "Pinterest",
+    "category": "Marketing, Ads, Email and Social",
+    "hint": "developers.pinterest.com",
+    "description": "Visual discovery and bookmarking engine with ecommerce shopping and visual ad campaigns.",
+    "auth_methods": [
+      "OAuth2 (Bearer token)"
+    ],
+    "self_serve": "Self-Serve Sandbox / Review Gated for Prod (Can create developer app and trial tokens in Developer Portal; standard tier requires review)",
+    "api_surface": "Pinterest REST API v5 covering pins, boards, ad accounts, campaigns, audience insights, conversion tags",
+    "buildability_verdict": "Build Ready for Sandbox (Immediate trial tokens for pins/boards; ad delivery requires trial-to-standard upgrade)",
+    "docs_url": "https://developers.pinterest.com/docs/api/v5/"
+  },
+  {
+    "id": 39,
+    "name": "Threads (Meta)",
+    "category": "Marketing, Ads, Email and Social",
+    "hint": "developers.facebook.com/docs/threads",
+    "description": "Text-based social network built by the Instagram team at Meta.",
+    "auth_methods": [
+      "OAuth2 / Threads User Access Token"
+    ],
+    "self_serve": "Self-Serve Development / App Review for Public (Developers can test on their own Threads account immediately; public distribution requires Meta App Review)",
+    "api_surface": "Threads REST API covering publish posts (text, images, video), retrieve user posts, reply management, insights",
+    "buildability_verdict": "Build Ready (Fast-growing social API; straightforward OAuth2 flow and media container publishing)",
+    "docs_url": "https://developers.facebook.com/docs/threads"
+  },
+  {
+    "id": 40,
+    "name": "SendGrid",
+    "category": "Marketing, Ads, Email and Social",
+    "hint": "sendgrid.com",
+    "description": "Cloud-based transactional and marketing email delivery and management platform.",
+    "auth_methods": [
+      "API Key (Header `Authorization: Bearer SG.xxx`)"
+    ],
+    "self_serve": "Self-Serve (Free tier 100 emails/day; API key generated in Settings > API Keys with granular scopes)",
+    "api_surface": "Comprehensive REST v3 API (Mail Send v3, Marketing Contacts, Stats, Suppressions, Webhooks), OpenAPI spec",
+    "buildability_verdict": "Build Ready (Canonical agent email tool; instant API keys and ultra-reliable mail send endpoints)",
+    "docs_url": "https://docs.sendgrid.com/api-reference"
+  },
+  {
+    "id": 41,
+    "name": "Shopify",
+    "category": "Ecommerce",
+    "hint": "shopify.dev",
+    "description": "Global ecommerce platform enabling merchants to build online storefronts and retail point-of-sale systems.",
+    "auth_methods": [
+      "OAuth2",
+      "Custom App Access Tokens (`shpat_...`)"
+    ],
+    "self_serve": "Self-Serve (Free Partner account creates unlimited developer stores; Custom Apps create instant API tokens)",
+    "api_surface": "Extensive Admin GraphQL API & REST API, Storefront API, Webhooks, official Shopify MCP servers",
+    "buildability_verdict": "Build Ready (Industry benchmark ecommerce API; custom apps provide instant zero-friction credentials)",
+    "docs_url": "https://shopify.dev/docs/api"
+  },
+  {
+    "id": 42,
+    "name": "WooCommerce",
+    "category": "Ecommerce",
+    "hint": "woocommerce.com/document/woocommerce-rest-api",
+    "description": "Open-source, customizable ecommerce plugin built for WordPress.",
+    "auth_methods": [
+      "HTTP Basic Auth over HTTPS (Consumer Key + Consumer Secret)",
+      "OAuth1.0a (HTTP fallback)"
+    ],
+    "self_serve": "Self-Serve (Completely open source; generate Consumer Key/Secret under WooCommerce > Settings > Advanced > REST API)",
+    "api_surface": "Full REST API v3 covering products, orders, customers, coupons, webhooks; OpenAPI definitions available",
+    "buildability_verdict": "Build Ready (Zero gating; any self-hosted or local WooCommerce instance can be plugged into an agent)",
+    "docs_url": "https://woocommerce.github.io/woocommerce-rest-api-docs/"
+  },
+  {
+    "id": 43,
+    "name": "BigCommerce",
+    "category": "Ecommerce",
+    "hint": "developer.bigcommerce.com",
+    "description": "Open SaaS ecommerce platform for fast-growing and enterprise mid-market brands.",
+    "auth_methods": [
+      "API Token (Headers `X-Auth-Token: ...`, `X-Auth-Client: ...`)",
+      "OAuth2"
+    ],
+    "self_serve": "Self-Serve (Free trial available; create Store-level API accounts in Advanced Settings > API Accounts in seconds)",
+    "api_surface": "Broad REST API v3 & GraphQL Storefront API covering catalog, orders, customers, checkouts, webhooks",
+    "buildability_verdict": "Build Ready (Very clean dual-header authentication with instantaneous store credential generation)",
+    "docs_url": "https://developer.bigcommerce.com/docs/rest-management"
+  },
+  {
+    "id": 44,
+    "name": "Salesforce Commerce Cloud",
+    "category": "Ecommerce",
+    "hint": "developer.salesforce.com/docs/commerce",
+    "description": "Enterprise ecommerce solution (B2C Commerce and B2B Commerce) for high-volume enterprise retailers.",
+    "auth_methods": [
+      "OAuth2 (Account Manager Client ID + Client Secret via SLAS / Commerce API)"
+    ],
+    "self_serve": "Gated Enterprise (Requires Salesforce Account Manager credentials and on-demand sandbox provisioning tied to enterprise contracts)",
+    "api_surface": "B2C Commerce REST APIs, Shopper API, SCAPI (Salesforce Commerce API), OpenAPI specifications",
+    "buildability_verdict": "Enterprise Gated Blocker (Heavy enterprise barrier; sandbox environments cannot be self-provisioned without partner contract)",
+    "docs_url": "https://developer.salesforce.com/docs/commerce"
+  },
+  {
+    "id": 45,
+    "name": "Magento (Adobe Commerce)",
+    "category": "Ecommerce",
+    "hint": "developer.adobe.com/commerce",
+    "description": "Flexible open-source and enterprise ecommerce platform owned by Adobe.",
+    "auth_methods": [
+      "Bearer Token (Admin/Customer token)",
+      "OAuth 1.0a",
+      "API Key"
+    ],
+    "self_serve": "Self-Serve for Open Source (Free self-hosted Magento Open Source download with instant admin tokens; Adobe Commerce Cloud is enterprise gated)",
+    "api_surface": "Full REST and GraphQL APIs covering catalog, orders, cart, inventory, search, and webhooks",
+    "buildability_verdict": "Build Ready (Open source version allows local testing; standard REST/GraphQL endpoints)",
+    "docs_url": "https://developer.adobe.com/commerce/webapi/"
+  },
+  {
+    "id": 46,
+    "name": "Squarespace",
+    "category": "Ecommerce",
+    "hint": "developers.squarespace.com",
+    "description": "Website builder and ecommerce platform tailored for creators, small businesses, and portfolios.",
+    "auth_methods": [
+      "API Key (Header `Authorization: Bearer KEY`)",
+      "OAuth2"
+    ],
+    "self_serve": "Paid Plan Gated (API key generation requires a Commerce Advanced plan or Business plan depending on endpoint; free trial allows UI testing)",
+    "api_surface": "REST API v1 covering orders, inventory, transactions, products, profiles, webhooks",
+    "buildability_verdict": "Plan Gated (API surface is modern and clean, but live keys require upgrading to a paid Commerce tier)",
+    "docs_url": "https://developers.squarespace.com/commerce-apis/overview"
+  },
+  {
+    "id": 47,
+    "name": "Ecwid",
+    "category": "Ecommerce",
+    "hint": "api-docs.ecwid.com",
+    "description": "Embeddable ecommerce widget platform by Lightspeed that adds online shopping to any website.",
+    "auth_methods": [
+      "Secret API Token (Header `Authorization: Bearer ...` or query param)",
+      "OAuth2"
+    ],
+    "self_serve": "Self-Serve (Free plan available; register as developer at my.ecwid.com to obtain instant test store and API tokens)",
+    "api_surface": "Full REST API v3 for products, orders, categories, customers, discounts, webhooks",
+    "buildability_verdict": "Build Ready (Generous free developer environment and simple Bearer token access)",
+    "docs_url": "https://api-docs.ecwid.com/reference/overview"
+  },
+  {
+    "id": 48,
+    "name": "Gumroad",
+    "category": "Ecommerce",
+    "hint": "gumroad.com/api",
+    "description": "Direct-to-consumer ecommerce platform for creators selling digital products, memberships, and courses.",
+    "auth_methods": [
+      "Personal Access Token (Bearer token)",
+      "OAuth2"
+    ],
+    "self_serve": "Self-Serve (Free account signup; generate Personal Access Token instantly in Settings > Advanced)",
+    "api_surface": "Straightforward REST API for products, sales, subscribers, custom fields, ping/webhooks",
+    "buildability_verdict": "Build Ready (Zero barrier; creators can hook up LLM agents to monitor sales and issue licenses immediately)",
+    "docs_url": "https://gumroad.com/api"
+  },
+  {
+    "id": 49,
+    "name": "Amazon Selling Partner",
+    "category": "Ecommerce",
+    "hint": "developer-docs.amazon.com/sp-api",
+    "description": "API suite for third-party sellers on Amazon to automate orders, inventory, pricing, and fulfillment.",
+    "auth_methods": [
+      "Login with Amazon (LWA) OAuth2 + AWS IAM Signature v4 (SigV4)"
+    ],
+    "self_serve": "Strictly Gated (Requires registered Amazon Professional Seller Account ($39.99/mo), AWS account for IAM, and extensive Developer Profile vetting by Amazon)",
+    "api_surface": "Extensive SP-API (RESTful with Swagger/OpenAPI models) for Orders, Feeds, Reports, Fulfillment (FBA), Pricing",
+    "buildability_verdict": "Heavily Gated Blocker (One of the most complex auth architectures: dual LWA OAuth + AWS SigV4 signing + strict PII security audit)",
+    "docs_url": "https://developer-docs.amazon.com/sp-api"
+  },
+  {
+    "id": 50,
+    "name": "FanBasis",
+    "category": "Ecommerce",
+    "hint": "fanbasis.com",
+    "description": "Creator monetization and experiences platform offering fan interactions, video shoutouts, and digital storefronts.",
+    "auth_methods": [
+      "API Key (Bearer token)",
+      "Checkout SDK Session Secret"
+    ],
+    "self_serve": "Self-Serve / Merchant Gated (Merchant account signup generates API keys; checkout SDK available on NPM `@fanbasis/checkout-sdk`)",
+    "api_surface": "REST API and embedded Checkout SDKs for digital products, payments, transactions, and webhooks",
+    "buildability_verdict": "Build Ready (REST API and npm SDK enable straightforward custom agent checkouts and fan interactions)",
+    "docs_url": "https://dev-docs.fanbasis.com"
+  },
+  {
+    "id": 51,
+    "name": "DataForSEO",
+    "category": "Data, SEO and Scraping",
+    "hint": "docs.dataforseo.com",
+    "description": "Comprehensive API provider for SEO data, SERP scraping, keyword research, backlinks, and domain analytics.",
+    "auth_methods": [
+      "HTTP Basic Auth (Login email + API Password)"
+    ],
+    "self_serve": "Self-Serve (Instant signup with $1 free sandbox test balance at dataforseo.com)",
+    "api_surface": "Massive REST v3 API covering SERP (Google, Bing, Yahoo), Keywords Data, Backlinks, On-Page, Business Data, App Data",
+    "buildability_verdict": "Build Ready (Pristine API design for agents; immediate credentials and free balance with zero setup friction)",
+    "docs_url": "https://docs.dataforseo.com/v3/"
+  },
+  {
+    "id": 52,
+    "name": "SE Ranking",
+    "category": "Data, SEO and Scraping",
+    "hint": "seranking.com/api",
+    "description": "All-in-one SEO and digital marketing platform for keyword rank tracking, site auditing, and competitor analysis.",
+    "auth_methods": [
+      "API Key (Header `Authorization: Token YOUR_TOKEN`)"
+    ],
+    "self_serve": "Paid Plan Gated (API access is restricted to Pro and Business paid subscription plans; free trial does not include API key generation)",
+    "api_surface": "REST API covering ranking positions, competitors, backlinks, site audit results, keyword suggestion",
+    "buildability_verdict": "Plan Gated (API documentation is comprehensive, but requires an active Pro/Business tier to generate credentials)",
+    "docs_url": "https://seranking.com/api.html"
+  },
+  {
+    "id": 53,
+    "name": "Ahrefs",
+    "category": "Data, SEO and Scraping",
+    "hint": "ahrefs.com/api",
+    "description": "Industry-leading SEO software suite for backlink analysis, keyword exploration, and content research.",
+    "auth_methods": [
+      "API Key (Header `Authorization: Bearer ...`)",
+      "OAuth2"
+    ],
+    "self_serve": "Strictly Paid Gated (API v3 access requires Enterprise plan subscription or dedicated API units add-on costing thousands/year)",
+    "api_surface": "High-performance REST API v3 for backlinks, domain ratings, organic keywords, top pages, traffic metrics",
+    "buildability_verdict": "Enterprise Cost Gated Blocker (API surface is exceptional, but gated behind very costly enterprise plans)",
+    "docs_url": "https://ahrefs.com/api/documentation"
+  },
+  {
+    "id": 54,
+    "name": "MrScraper",
+    "category": "Data, SEO and Scraping",
+    "hint": "docs.mrscraper.com",
+    "description": "Visual web scraper and automated data extraction platform for structured web harvesting.",
+    "auth_methods": [
+      "API Key (Header `Authorization: Bearer <API_KEY>`)"
+    ],
+    "self_serve": "Self-Serve (Free tier available with 30 free scraping credits; API keys generated immediately in dashboard)",
+    "api_surface": "REST API to trigger scrapers, retrieve extracted JSON data, schedule runs, manage webhook notifications",
+    "buildability_verdict": "Build Ready (Immediate self-serve API keys and simple JSON trigger endpoints)",
+    "docs_url": "https://docs.mrscraper.com"
+  },
+  {
+    "id": 55,
+    "name": "Apify",
+    "category": "Data, SEO and Scraping",
+    "hint": "docs.apify.com",
+    "description": "Cloud platform for web scraping, browser automation, and data extraction using pre-built or custom Actors.",
+    "auth_methods": [
+      "API Token (Header `Authorization: Bearer ...` or query param `token=...`)"
+    ],
+    "self_serve": "Self-Serve (Free tier with $5 monthly recurring credits; instant API token in Settings > Integrations)",
+    "api_surface": "Comprehensive REST API, Python/JS clients, 1,500+ pre-built Actors, webhooks, official Apify MCP server",
+    "buildability_verdict": "Build Ready (Top agent tooling platform; official MCP server and free credit allocation)",
+    "docs_url": "https://docs.apify.com/api/v2"
+  },
+  {
+    "id": 56,
+    "name": "Firecrawl",
+    "category": "Data, SEO and Scraping",
+    "hint": "firecrawl.dev",
+    "description": "API service that converts entire websites or single pages into clean, LLM-ready markdown or structured data.",
+    "auth_methods": [
+      "API Key (Header `Authorization: Bearer fc-...`)"
+    ],
+    "self_serve": "Self-Serve (Free tier with 500 credits at firecrawl.dev, or 100% open-source self-hostable via Docker)",
+    "api_surface": "Clean REST API (`/v1/scrape`, `/v1/crawl`, `/v1/map`), Python/Node SDKs, official Firecrawl MCP server",
+    "buildability_verdict": "Build Ready (Built specifically for AI agents; native markdown output and official MCP support)",
+    "docs_url": "https://docs.firecrawl.dev"
+  },
+  {
+    "id": 57,
+    "name": "Bright Data",
+    "category": "Data, SEO and Scraping",
+    "hint": "brightdata.com",
+    "description": "Enterprise proxy network and web data collection infrastructure providing Scraping Browser and Web Unlocker APIs.",
+    "auth_methods": [
+      "API Key (Header `Authorization: Bearer ...`)",
+      "Proxy Credentials (Username + Password)"
+    ],
+    "self_serve": "Self-Serve (Free trial available with credit card verification; instant API token generation in control panel)",
+    "api_surface": "REST APIs for Datasets, Web Unlocker, Scraping Browser (Puppeteer/Playwright CDP connection), SERP API, official Bright Data MCP",
+    "buildability_verdict": "Build Ready (Official MCP server and robust automated unblocking endpoints)",
+    "docs_url": "https://docs.brightdata.com"
+  },
+  {
+    "id": 58,
+    "name": "Sherlock",
+    "category": "Data, SEO and Scraping",
+    "hint": "github.com/sherlock-project/sherlock",
+    "description": "Open-source OSINT command-line tool used to find usernames across hundreds of social networks.",
+    "auth_methods": [
+      "No Auth (Local open-source CLI / Python package)"
+    ],
+    "self_serve": "Self-Serve (100% free open-source tool on GitHub; clone or install via `pip install sherlock-project`)",
+    "api_surface": "CLI tool / Python module; no hosted SaaS REST API by default (can be wrapped in a simple FastAPI or agent shell command)",
+    "buildability_verdict": "Build Ready via CLI / Local Tool (Can be wrapped as a local Composio CLI action or Python tool in minutes)",
+    "docs_url": "https://github.com/sherlock-project/sherlock"
+  },
+  {
+    "id": 59,
+    "name": "Waterfall.io",
+    "category": "Data, SEO and Scraping",
+    "hint": "waterfall.io (contact/company intel)",
+    "description": "B2B data enrichment and GTM waterfall platform aggregating 30+ contact/company data vendors behind one API.",
+    "auth_methods": [
+      "API Key (Header `x-api-key: YOUR_KEY`)"
+    ],
+    "self_serve": "Gated / Sales Request (Contact enrichment platform requires booking demo or requesting API key from sales/founders)",
+    "api_surface": "REST API (`api.waterfall.io/v1/`) hosted on Mintlify; endpoints for email/phone reveal, company reveal, job changes",
+    "buildability_verdict": "Gated Access Blocker (Clean REST architecture with x-api-key, but production keys require direct commercial approval)",
+    "docs_url": "https://docs.waterfall.io"
+  },
+  {
+    "id": 60,
+    "name": "Clay",
+    "category": "Data, SEO and Scraping",
+    "hint": "clay.com",
+    "description": "Data enrichment and automated outbound sales platform combining 50+ data providers and AI research agents.",
+    "auth_methods": [
+      "API Key (Header `Authorization: Bearer ...` or `x-api-key`)",
+      "Webhook Integration"
+    ],
+    "self_serve": "Paid / Tier Gated (Free plan available for table testing, but Clay API / webhook integrations require paid Pro/Enterprise plan)",
+    "api_surface": "REST API for Clay tables, webhook enrichment triggers, HTTP action integrations",
+    "buildability_verdict": "Plan Gated (Accessible for users on paid tiers; primary interaction is via webhooks and table APIs)",
+    "docs_url": "https://clay.com/docs"
+  },
+  {
+    "id": 61,
+    "name": "GitHub",
+    "category": "Developer, Infra and Data platforms",
+    "hint": "docs.github.com/rest",
+    "description": "Code hosting, Git version control, collaboration, and continuous integration/deployment platform.",
+    "auth_methods": [
+      "Personal Access Token (Classic & Fine-Grained `github_pat_...`)",
+      "GitHub Apps (JWT + Installation Token)",
+      "OAuth2"
+    ],
+    "self_serve": "Self-Serve (Free account signup; instant fine-grained PAT generation in Developer Settings)",
+    "api_surface": "Massive REST API, GraphQL v4 API, Webhooks, GitHub Actions, official GitHub MCP server",
+    "buildability_verdict": "Build Ready (Industry flagship agent integration; official MCP server and immediate token access)",
+    "docs_url": "https://docs.github.com/en/rest"
+  },
+  {
+    "id": 62,
+    "name": "Vercel",
+    "category": "Developer, Infra and Data platforms",
+    "hint": "vercel.com/docs/rest-api",
+    "description": "Frontend cloud platform for deploying and hosting modern web applications, Next.js, and serverless edge functions.",
+    "auth_methods": [
+      "Personal / Team Access Token (Header `Authorization: Bearer ...`)",
+      "OAuth2"
+    ],
+    "self_serve": "Self-Serve (Free Hobby tier; generate access tokens instantly in Account Settings > Tokens)",
+    "api_surface": "Broad REST API covering deployments, domains, projects, environment variables, edge configs, teams, webhooks",
+    "buildability_verdict": "Build Ready (Pristine REST API; immediate token creation allows instant agent deployment workflows)",
+    "docs_url": "https://vercel.com/docs/rest-api"
+  },
+  {
+    "id": 63,
+    "name": "Netlify",
+    "category": "Developer, Infra and Data platforms",
+    "hint": "docs.netlify.com/api",
+    "description": "Cloud platform for building, deploying, and scaling modern web apps, Jamstack sites, and serverless backends.",
+    "auth_methods": [
+      "Personal Access Token (Header `Authorization: Bearer ...`)",
+      "OAuth2"
+    ],
+    "self_serve": "Self-Serve (Free tier available; create personal access tokens immediately in User Settings > Applications)",
+    "api_surface": "Full REST API with OpenAPI specification, CLI tool (`netlify-cli`), official Netlify MCP server",
+    "buildability_verdict": "Build Ready (OpenAPI specification and official MCP support provide instant agent toolkit readiness)",
+    "docs_url": "https://docs.netlify.com/api/get-started/"
+  },
+  {
+    "id": 64,
+    "name": "Cloudflare",
+    "category": "Developer, Infra and Data platforms",
+    "hint": "developers.cloudflare.com/api",
+    "description": "Global cloud network providing DNS, CDN, DDoS protection, edge compute (Workers), and serverless storage.",
+    "auth_methods": [
+      "API Token (Granular scoped Bearer token)",
+      "Global API Key (Legacy Basic Auth)"
+    ],
+    "self_serve": "Self-Serve (Free plan available; create granular scoped API tokens instantly in My Profile > API Tokens)",
+    "api_surface": "Immense REST API covering DNS, Workers, Pages, KV, R2, D1, Firewall rules, official Cloudflare MCP server",
+    "buildability_verdict": "Build Ready (Scoped API tokens and official Cloudflare MCP server make this ideal for agent operations)",
+    "docs_url": "https://developers.cloudflare.com/api/"
+  },
+  {
+    "id": 65,
+    "name": "Supabase",
+    "category": "Developer, Infra and Data platforms",
+    "hint": "supabase.com/docs",
+    "description": "Open-source Firebase alternative providing managed PostgreSQL, Auth, Edge Functions, Realtime, and Vector storage.",
+    "auth_methods": [
+      "API Key (Header `apikey: ...` and `Authorization: Bearer ...`)",
+      "Personal Access Token (Management API)"
+    ],
+    "self_serve": "Self-Serve (Free tier 2 projects; project anon/service_role keys and management tokens created instantly)",
+    "api_surface": "PostgREST API, Management REST API, GraphQL, Edge Functions, Postgres Connection string, Supabase MCP server",
+    "buildability_verdict": "Build Ready (One of the most AI-ready backends; service_role keys and Supabase MCP server enable full agent autonomy)",
+    "docs_url": "https://supabase.com/docs/reference/api"
+  },
+  {
+    "id": 66,
+    "name": "Neo4j",
+    "category": "Developer, Infra and Data platforms",
+    "hint": "neo4j.com/docs/api",
+    "description": "Graph database management system optimized for storing and querying complex interconnected relationships.",
+    "auth_methods": [
+      "Basic Auth (Username + Password)",
+      "Aura API Bearer Token (Client ID + Client Secret)"
+    ],
+    "self_serve": "Self-Serve (Free tier AuraDB instance at neo4j.com/cloud/aura/ with instant credentials)",
+    "api_surface": "Cypher Bolt protocol (TCP), Aura Admin REST API, HTTP Cypher transactional endpoint, Neo4j Graph MCP server",
+    "buildability_verdict": "Build Ready (AuraDB free tier and community Graph MCP servers make graph-augmented agents immediately viable)",
+    "docs_url": "https://neo4j.com/docs/aura/platform/api/overview/"
+  },
+  {
+    "id": 67,
+    "name": "Snowflake",
+    "category": "Developer, Infra and Data platforms",
+    "hint": "docs.snowflake.com",
+    "description": "Cloud data warehousing and analytics platform for large-scale structured and semi-structured data workloads.",
+    "auth_methods": [
+      "OAuth2",
+      "Key Pair Authentication (JWT Bearer)",
+      "Basic Auth (Username/Password)"
+    ],
+    "self_serve": "Self-Serve (30-day free trial with $400 credits at snowflake.com; SQL API keys configured via key-pair)",
+    "api_surface": "Snowflake SQL REST API v2, Python/Snowpark SDKs, Snowflake Cortex AI functions, Snowflake MCP server",
+    "buildability_verdict": "Build Ready (SQL REST API allows serverless query execution without persistent JDBC/ODBC drivers)",
+    "docs_url": "https://docs.snowflake.com/en/developer-guide/sql-api/index"
+  },
+  {
+    "id": 68,
+    "name": "MongoDB Atlas",
+    "category": "Developer, Infra and Data platforms",
+    "hint": "mongodb.com/docs/atlas/api",
+    "description": "Fully-managed cloud document database service with built-in search and vector indexing.",
+    "auth_methods": [
+      "HTTP Digest Auth (Public Key + Private Key)",
+      "MongoDB Connection String URI with DB User Credentials"
+    ],
+    "self_serve": "Self-Serve (Free M0 sandbox cluster forever at mongodb.com; API keys generated in Access Manager)",
+    "api_surface": "Atlas Administration REST API (Digest Auth), Data API (Deprecated in favor of Atlas App Services / Drivers), Atlas MCP server",
+    "buildability_verdict": "Build Ready (Free M0 clusters enable zero-cost agent database persistence; note Digest Auth requirement for Admin API)",
+    "docs_url": "https://www.mongodb.com/docs/atlas/api/"
+  },
+  {
+    "id": 69,
+    "name": "Datadog",
+    "category": "Developer, Infra and Data platforms",
+    "hint": "docs.datadoghq.com/api",
+    "description": "Cloud-scale monitoring and security platform for metrics, traces, logs, and infrastructure telemetry.",
+    "auth_methods": [
+      "API Key + Application Key (Headers `DD-API-KEY` and `DD-APPLICATION-KEY`)"
+    ],
+    "self_serve": "Self-Serve (14-day free trial; generate API and Application keys in Organization Settings > API Keys)",
+    "api_surface": "Extensive REST v1/v2 API covering metrics, logs, traces, dashboards, monitors, incidents; OpenAPI 3.0 specs",
+    "buildability_verdict": "Build Ready (Dual-key header auth; comprehensive OpenAPI specifications enable quick agent SDK generation)",
+    "docs_url": "https://docs.datadoghq.com/api/latest/"
+  },
+  {
+    "id": 70,
+    "name": "Sentry",
+    "category": "Developer, Infra and Data platforms",
+    "hint": "docs.sentry.io/api",
+    "description": "Application performance monitoring, crash analytics, and error tracking software for developers.",
+    "auth_methods": [
+      "Auth Token (Header `Authorization: Bearer <TOKEN>`)",
+      "Internal / Public Integrations (OAuth2)"
+    ],
+    "self_serve": "Self-Serve (Free Developer tier; generate User Auth Tokens immediately in User Settings > API > Auth Tokens)",
+    "api_surface": "Rich REST API covering issues, events, releases, projects, alerts, teams, official Sentry MCP server",
+    "buildability_verdict": "Build Ready (Official Sentry MCP server exists; auth tokens give full programmatic control over issue resolution)",
+    "docs_url": "https://docs.sentry.io/api/"
+  },
+  {
+    "id": 71,
+    "name": "Notion",
+    "category": "Productivity and Project Management",
+    "hint": "developers.notion.com",
+    "description": "Connected workspace for notes, docs, wikis, project tracking, and relational knowledge bases.",
+    "auth_methods": [
+      "Internal Integration Secret (`ntn_...` / `secret_...`)",
+      "OAuth2 (Public Integrations)"
+    ],
+    "self_serve": "Self-Serve (Free tier available; create Internal Integrations at notion.so/my-integrations with instant secret tokens)",
+    "api_surface": "Extensive REST API for databases, pages, blocks, users, comments; official and community Notion MCP servers",
+    "buildability_verdict": "Build Ready (Canonical agent toolkit candidate; internal integration tokens are fast and frictionless)",
+    "docs_url": "https://developers.notion.com"
+  },
+  {
+    "id": 72,
+    "name": "Airtable",
+    "category": "Productivity and Project Management",
+    "hint": "airtable.com/developers",
+    "description": "Low-code relational database and spreadsheet-hybrid platform for building business workflows.",
+    "auth_methods": [
+      "Personal Access Token (Header `Authorization: Bearer pat...`)",
+      "OAuth2"
+    ],
+    "self_serve": "Self-Serve (Free tier available; generate Personal Access Tokens with custom scopes in airtable.com/create/tokens)",
+    "api_surface": "Polished REST API with interactive, auto-generated documentation per user base; Airtable MCP server",
+    "buildability_verdict": "Build Ready (Superb documentation tailored dynamically to the schema of your specific base)",
+    "docs_url": "https://airtable.com/developers/web/api/introduction"
+  },
+  {
+    "id": 73,
+    "name": "Linear",
+    "category": "Productivity and Project Management",
+    "hint": "developers.linear.app",
+    "description": "Modern issue tracking and software project management tool designed for high-performance engineering teams.",
+    "auth_methods": [
+      "Personal API Key (`lin_api_...`)",
+      "OAuth2"
+    ],
+    "self_serve": "Self-Serve (Free tier available; create personal API keys in Settings > Security & Access > Personal API keys)",
+    "api_surface": "Modern GraphQL API exclusively, webhook streaming, TypeScript SDK, official Linear MCP server",
+    "buildability_verdict": "Build Ready (Benchmark for developer UX; GraphQL schema is clean, predictable, and agent-native)",
+    "docs_url": "https://developers.linear.app/docs/graphql/working-with-the-graphql-api"
+  },
+  {
+    "id": 74,
+    "name": "Jira",
+    "category": "Productivity and Project Management",
+    "hint": "developer.atlassian.com",
+    "description": "Enterprise agile issue and project tracking software by Atlassian.",
+    "auth_methods": [
+      "API Token (Basic Auth `user@email.com:API_TOKEN`)",
+      "OAuth 2.0 (3LO - 3-legged OAuth)"
+    ],
+    "self_serve": "Self-Serve (Free plan up to 10 users; create API tokens immediately at id.atlassian.com/manage-profile/security/api-tokens)",
+    "api_surface": "Immense REST API v3, Jira Cloud platform webhooks, Forge apps, official Atlassian MCP server",
+    "buildability_verdict": "Build Ready (Widespread enterprise demand; basic auth with API token enables instant agent toolkit creation)",
+    "docs_url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/"
+  },
+  {
+    "id": 75,
+    "name": "Asana",
+    "category": "Productivity and Project Management",
+    "hint": "developers.asana.com",
+    "description": "Work and project management platform helping teams orchestrate tasks, workflows, and strategic goals.",
+    "auth_methods": [
+      "Personal Access Token (Header `Authorization: Bearer ...`)",
+      "OAuth2"
+    ],
+    "self_serve": "Self-Serve (Free plan available; generate Personal Access Tokens in Developer App Console)",
+    "api_surface": "Comprehensive REST API covering tasks, projects, workspaces, custom fields, webhooks, OpenAPI spec",
+    "buildability_verdict": "Build Ready (Zero auth friction with PATs; detailed OpenAPI specifications)",
+    "docs_url": "https://developers.asana.com/reference/rest-api-reference"
+  },
+  {
+    "id": 76,
+    "name": "Monday.com",
+    "category": "Productivity and Project Management",
+    "hint": "developer.monday.com",
+    "description": "Cloud Work OS where teams build custom workflow apps, project boards, and operational processes.",
+    "auth_methods": [
+      "Personal API Token (Header `Authorization: <token>`)",
+      "OAuth2"
+    ],
+    "self_serve": "Self-Serve (Free plan / 14-day trial; API token available immediately under Profile > Developers > Developer)",
+    "api_surface": "GraphQL API (2024-xx versioned) for querying boards, items, columns, updates, webhooks; Monday MCP server",
+    "buildability_verdict": "Build Ready (GraphQL interface makes multi-entity querying very efficient for LLMs)",
+    "docs_url": "https://developer.monday.com/api-reference/docs"
+  },
+  {
+    "id": 77,
+    "name": "ClickUp",
+    "category": "Productivity and Project Management",
+    "hint": "clickup.com/api",
+    "description": "All-in-one productivity platform replacing tasks, docs, chat, goals, and project tracking tools.",
+    "auth_methods": [
+      "Personal API Token (`pk_...`)",
+      "OAuth2"
+    ],
+    "self_serve": "Self-Serve (Free plan available; generate Personal API Token in Settings > Apps in 10 seconds)",
+    "api_surface": "Extensive REST v2 API covering spaces, folders, lists, tasks, custom fields, webhooks, ClickUp MCP server",
+    "buildability_verdict": "Build Ready (Very broad REST coverage; personal token enables immediate agent interaction)",
+    "docs_url": "https://clickup.com/api"
+  },
+  {
+    "id": 78,
+    "name": "Coda",
+    "category": "Productivity and Project Management",
+    "hint": "coda.io/developers",
+    "description": "Interactive document platform combining docs, spreadsheets, and building blocks into custom team apps.",
+    "auth_methods": [
+      "API Token (Header `Authorization: Bearer <TOKEN>`)"
+    ],
+    "self_serve": "Self-Serve (Free tier available; generate API tokens in Account Settings > Coda API Tokens)",
+    "api_surface": "Clean REST API v1 covering docs, pages, tables, rows, formulas, controls, and webhooks; OpenAPI spec",
+    "buildability_verdict": "Build Ready (Extremely agent-friendly; row manipulation and doc formulas work seamlessly via REST)",
+    "docs_url": "https://coda.io/developers/apis/v1"
+  },
+  {
+    "id": 79,
+    "name": "Smartsheet",
+    "category": "Productivity and Project Management",
+    "hint": "smartsheet.com/developers",
+    "description": "Enterprise work execution platform utilizing dynamic spreadsheets, Gantt charts, and automated workflows.",
+    "auth_methods": [
+      "Personal Access Token (Bearer token)",
+      "OAuth2"
+    ],
+    "self_serve": "Self-Serve (30-day free trial; generate API access tokens in Account > Personal Settings > API Access)",
+    "api_surface": "Full-featured REST v2.0 API covering sheets, rows, columns, reports, workspaces, webhooks; OpenAPI spec",
+    "buildability_verdict": "Build Ready (Immediate PAT generation and mature, well-documented REST endpoints)",
+    "docs_url": "https://smartsheet.redoc.ly"
+  },
+  {
+    "id": 80,
+    "name": "Harvest",
+    "category": "Productivity and Project Management",
+    "hint": "harvestapp.com (help.getharvest.com/api-v2)",
+    "description": "Time tracking, invoicing, and expense reporting tool designed for service businesses and agencies.",
+    "auth_methods": [
+      "Personal Access Token (Headers `Authorization: Bearer <TOKEN>` and `Harvest-Account-Id: <ID>`)",
+      "OAuth2"
+    ],
+    "self_serve": "Self-Serve (Free trial available; create personal access tokens immediately at id.getharvest.com/developers)",
+    "api_surface": "REST API v2 covering time entries, clients, projects, tasks, invoices, expenses, and webhooks",
+    "buildability_verdict": "Build Ready (Clean dual-header auth; fast self-serve token provisioning)",
+    "docs_url": "https://help.getharvest.com/api-v2/"
+  },
+  {
+    "id": 81,
+    "name": "Stripe",
+    "category": "Finance and Fintech",
+    "hint": "stripe.com/docs/api",
+    "description": "Financial infrastructure platform for payment processing, billing, payouts, and card issuing.",
+    "auth_methods": [
+      "API Secret Key (Header `Authorization: Bearer sk_test_...`)",
+      "Restricted API Keys (RAKs)"
+    ],
+    "self_serve": "Self-Serve (Instant signup with unlimited testmode sandboxing; zero verification needed to start coding)",
+    "api_surface": "Global gold-standard REST API, webhook signatures, fine-grained RAKs, official Stripe agent toolkit & MCP",
+    "buildability_verdict": "Build Ready (The gold standard for developer platforms; testmode keys work immediately in any agent toolkit)",
+    "docs_url": "https://stripe.com/docs/api"
+  },
+  {
+    "id": 82,
+    "name": "Plaid",
+    "category": "Finance and Fintech",
+    "hint": "plaid.com/docs",
+    "description": "Fintech data network connecting consumer bank accounts to financial applications and fintech tools.",
+    "auth_methods": [
+      "Client ID + Secret (Headers `PLAID-CLIENT-ID` and `PLAID-SECRET` or JSON request body)"
+    ],
+    "self_serve": "Self-Serve Sandbox (Free sandbox environment with synthetic test bank accounts at plaid.com; Production requires KYB vetting)",
+    "api_surface": "Modern REST API covering Auth, Transactions, Balance, Identity, Investments, Payment Initiation, OpenAPI specs",
+    "buildability_verdict": "Build Ready in Sandbox (Sandbox API keys are instant and fully functional for tool testing; live banking requires compliance approval)",
+    "docs_url": "https://plaid.com/docs/api/"
+  },
+  {
+    "id": 83,
+    "name": "Binance",
+    "category": "Finance and Fintech",
+    "hint": "binance-docs.github.io",
+    "description": "Global cryptocurrency exchange supporting spot trading, futures, derivatives, and crypto wallets.",
+    "auth_methods": [
+      "API Key + HMAC-SHA256 Signature (or Ed25519/RSA asymmetric signature) via header `X-MBX-APIKEY`"
+    ],
+    "self_serve": "Self-Serve (Account signup provides API Key & Secret; Spot Testnet available for simulated trading)",
+    "api_surface": "Massive REST API and WebSocket Streams covering market data, order management, account balances, websockets",
+    "buildability_verdict": "Build Ready (Requires timestamped HMAC signature generation on private endpoints, but fully self-serve)",
+    "docs_url": "https://binance-docs.github.io/apidocs/spot/en/"
+  },
+  {
+    "id": 84,
+    "name": "Paygent Connect",
+    "category": "Finance and Fintech",
+    "hint": "paygent (NMI-powered)",
+    "description": "Enterprise payment gateway and merchant orchestration platform powered by NMI technology.",
+    "auth_methods": [
+      "API Key / Bearer Token (`Authorization: Bearer <key>`)",
+      "OAuth2 (Client Credentials)"
+    ],
+    "self_serve": "Gated Merchant Account (Requires merchant application or NMI gateway reseller sandbox account; not instant open self-serve)",
+    "api_surface": "RESTful payment gateway API for credit cards, tokenization, recurring subscriptions, reporting",
+    "buildability_verdict": "Merchant Gated Blocker (Requires merchant provisioning and onboarding process to obtain active credentials)",
+    "docs_url": "https://www.nmi.com/developers/"
+  },
+  {
+    "id": 85,
+    "name": "iPayX",
+    "category": "Finance and Fintech",
+    "hint": "ipayx.ai/docs",
+    "description": "Neutral, MCP-native foreign exchange (FX) transaction audit, verification, and mid-market spread analysis engine.",
+    "auth_methods": [
+      "Bearer Token (`ipx_live_...` or `ipx_test_...`)"
+    ],
+    "self_serve": "Self-Serve (Free tier allows 10 audits/day; documentation and server hosted directly on Supabase Edge functions)",
+    "api_surface": "MCP Server (`/mcp-server`) and REST endpoints (`audit_fx_transaction`, `check_fx_mid_market_rate`, `full_forensic_fx_report`)",
+    "buildability_verdict": "Build Ready (Natively designed as an MCP server with free tier keys; immediate zero-overhead agent toolkit)",
+    "docs_url": "https://hvujzsdwcoweirroubeh.supabase.co/functions/v1/mcp-server/docs"
+  },
+  {
+    "id": 86,
+    "name": "QuickBooks",
+    "category": "Finance and Fintech",
+    "hint": "developer.intuit.com",
+    "description": "Cloud accounting software by Intuit for small and medium businesses, invoicing, and tax tracking.",
+    "auth_methods": [
+      "OAuth2 (Authorization Code Flow)"
+    ],
+    "self_serve": "Self-Serve (Free Intuit Developer account provides instant developer sandbox company and OAuth credentials)",
+    "api_surface": "Extensive Accounting REST API v3 for invoices, bills, customers, accounts, tax rates, reports",
+    "buildability_verdict": "Build Ready (Developer sandbox is free and immediate; standard OAuth2 dance required)",
+    "docs_url": "https://developer.intuit.com/app/developer/qbo/docs/develop"
+  },
+  {
+    "id": 87,
+    "name": "Xero",
+    "category": "Finance and Fintech",
+    "hint": "developer.xero.com",
+    "description": "Cloud-based small business accounting and financial reporting platform.",
+    "auth_methods": [
+      "OAuth2 (Authorization Code flow, PKCE, and Custom Connections)"
+    ],
+    "self_serve": "Self-Serve (Free developer account at developer.xero.com includes instant demo company sandbox)",
+    "api_surface": "Accounting REST API, Bank Feeds API, Payroll API, Assets API, Projects API, Webhooks, OpenAPI specs",
+    "buildability_verdict": "Build Ready (Free demo company sandbox makes testing seamless; clean OpenAPI specs available)",
+    "docs_url": "https://developer.xero.com/documentation/api/accounting/overview"
+  },
+  {
+    "id": 88,
+    "name": "Brex",
+    "category": "Finance and Fintech",
+    "hint": "developer.brex.com",
+    "description": "Corporate card, spend management, business banking, and travel reimbursement platform for startups and enterprises.",
+    "auth_methods": [
+      "OAuth2 (Authorization Code Flow)",
+      "User API Key (Bearer token for customer internal integrations)"
+    ],
+    "self_serve": "Customer Account Gated (API tokens can be self-served inside an active Brex account, but standalone developers must register for Brex or use partner sandbox)",
+    "api_surface": "Modern REST API covering Team, Expenses, Budgets, Payments, Webhooks; OpenAPI specifications provided",
+    "buildability_verdict": "Build Ready (Modern API surface; customer account required for internal tokens, or partner app review for public OAuth)",
+    "docs_url": "https://developer.brex.com/openapi/core_api/"
+  },
+  {
+    "id": 89,
+    "name": "Ramp",
+    "category": "Finance and Fintech",
+    "hint": "docs.ramp.com",
+    "description": "Corporate charge card, finance automation, bill pay, and expense management platform.",
+    "auth_methods": [
+      "OAuth2 (Client Credentials flow & Authorization Code flow)"
+    ],
+    "self_serve": "Customer Account Gated (Client Credentials flow requires Developer role in active Ramp workspace; partner apps require review)",
+    "api_surface": "Modern REST API covering cards, transactions, reimbursements, spend programs, accounting sync, webhooks",
+    "buildability_verdict": "Build Ready (Modern developer platform with developer sandbox available for qualified applicants/customers)",
+    "docs_url": "https://docs.ramp.com"
+  },
+  {
+    "id": 90,
+    "name": "PitchBook",
+    "category": "Finance and Fintech",
+    "hint": "pitchbook.com (research API)",
+    "description": "Comprehensive financial data provider covering private capital markets, venture capital, PE, and M&A deals.",
+    "auth_methods": [
+      "API Key / OAuth2 (Enterprise client credentials)"
+    ],
+    "self_serve": "Strictly Enterprise Sales Gated (Requires high-tier enterprise PitchBook subscription costing $15,000-$50,000+ per year; no public sandbox)",
+    "api_surface": "Institutional REST API and Direct Data Feeds covering companies, deals, investors, funds, advisors, and valuation multiples",
+    "buildability_verdict": "Enterprise Cost Gated Blocker (Highest financial barrier to entry; impossible to self-serve without enterprise corporate contract)",
+    "docs_url": "https://pitchbook.com/products/data-integrations/api"
+  },
+  {
+    "id": 91,
+    "name": "NotebookLM",
+    "category": "AI, Research and Media-native",
+    "hint": "cloud.google.com/gemini (Enterprise API)",
+    "description": "Personalized AI research assistant and source-grounded notebook environment powered by Gemini.",
+    "auth_methods": [
+      "Google Cloud IAM / OAuth2 Bearer Token (via Vertex AI Search & Conversation / Agent Builder)"
+    ],
+    "self_serve": "Self-Serve via Google Cloud (NotebookLM consumer web app has no standalone public REST API; enterprise backend APIs are accessible via Google Cloud Vertex AI with free $300 trial credits)",
+    "api_surface": "Vertex AI Search and Conversation API, Discovery Engine API, Gemini 1.5 Pro File API / Grounding; consumer web app remains UI-only",
+    "buildability_verdict": "Architectural Divergence / Enterprise API (Consumer app lacks public API; programmatic source-grounding must be implemented via Google Cloud Vertex AI APIs)",
+    "docs_url": "https://cloud.google.com/generative-ai-app-builder/docs"
+  },
+  {
+    "id": 92,
+    "name": "Otter AI",
+    "category": "AI, Research and Media-native",
+    "hint": "help.otter.ai (MCP server)",
+    "description": "AI meeting recorder, transcription assistant, and automated meeting summarizer.",
+    "auth_methods": [
+      "Bearer Token (Enterprise API)",
+      "OAuth2 / Managed MCP Gateway (Composio / Zapier)"
+    ],
+    "self_serve": "Enterprise Plan Gated for Native API / Self-Serve via Composio (Direct native Otter API requires an Otter Enterprise plan and admin approval; managed connectors provide agent access)",
+    "api_surface": "Public REST API (`/conversations`, `/workspace`), official/partner MCP server integration, webhooks",
+    "buildability_verdict": "Enterprise Gated natively (Native direct API requires Enterprise tier; Composio / third-party MCP bridges provide a viable alternative path)",
+    "docs_url": "https://help.otter.ai"
+  },
+  {
+    "id": 93,
+    "name": "Fathom",
+    "category": "AI, Research and Media-native",
+    "hint": "fathom.video",
+    "description": "AI meeting assistant that records, transcribes, highlights, and summarizes Zoom, Google Meet, and Teams calls.",
+    "auth_methods": [
+      "API Key (Bearer `Authorization: Bearer <API_KEY>`)"
+    ],
+    "self_serve": "Self-Serve (Free tier available; API access generated inside Fathom account settings under API Keys / Zapier)",
+    "api_surface": "REST API covering meetings, transcripts, action items, summaries, and incoming/outgoing webhooks",
+    "buildability_verdict": "Build Ready (Simple API key auth and clean JSON meeting payloads)",
+    "docs_url": "https://fathom.video/api"
+  },
+  {
+    "id": 94,
+    "name": "Consensus",
+    "category": "AI, Research and Media-native",
+    "hint": "consensus.app (OAuth requested)",
+    "description": "AI-powered academic search engine extracting scientific consensus from 200M+ peer-reviewed research papers.",
+    "auth_methods": [
+      "API Key (Header `x-api-key: ...`)",
+      "OAuth 2.0 with PKCE (via `consensus.app/oauth/` and dynamic client registration)"
+    ],
+    "self_serve": "Self-Serve (API keys can be created directly in the user profile API & MCP Dashboard; dynamic OAuth client registration supported via RFC 7591)",
+    "api_surface": "REST API (`api.consensus.app/v1/search`), official Consensus MCP Server (`mcp.consensus.app`)",
+    "buildability_verdict": "Build Ready (Native MCP server and OAuth2 PKCE dynamic registration make this exceptionally ready for agents)",
+    "docs_url": "https://consensus.app"
+  },
+  {
+    "id": 95,
+    "name": "Reducto",
+    "category": "AI, Research and Media-native",
+    "hint": "reducto.ai (document parsing)",
+    "description": "Vision-first AI document parser converting complex PDFs, scans, spreadsheets, and diagrams into clean markdown for LLMs.",
+    "auth_methods": [
+      "API Key (Header `Authorization: Bearer <API_KEY>`)"
+    ],
+    "self_serve": "Self-Serve (Free tier with 1,000 free page credits upon signup at reducto.ai)",
+    "api_surface": "Modern REST API (`/parse`, `/extract`, `/job`), Python and TypeScript SDKs, asynchronous job handling",
+    "buildability_verdict": "Build Ready (Designed from the ground up for AI agent toolchains; instant free credits and single-header auth)",
+    "docs_url": "https://docs.reducto.ai"
+  },
+  {
+    "id": 96,
+    "name": "Devin",
+    "category": "AI, Research and Media-native",
+    "hint": "docs.devin.ai (MCP)",
+    "description": "Autonomous AI software engineer by Cognition that executes complex multi-step coding, debugging, and deployment tasks.",
+    "auth_methods": [
+      "API Key (Header `Authorization: Bearer devin_...`)"
+    ],
+    "self_serve": "Self-Serve for API Users / Paid Subscription (Access available to Devin users; API keys generated via dashboard at app.devin.ai/settings/api-keys)",
+    "api_surface": "REST API (`/v1/sessions`), Session management, Webhooks, official Devin MCP server integration",
+    "buildability_verdict": "Build Ready (Official MCP server and REST API allow agent-to-agent delegation and session orchestration)",
+    "docs_url": "https://docs.devin.ai"
+  },
+  {
+    "id": 97,
+    "name": "higgsfield",
+    "category": "AI, Research and Media-native",
+    "hint": "higgsfield.ai/cli (content suite)",
+    "description": "Generative video and creative AI platform for cinematic video creation, camera controls, and character animation.",
+    "auth_methods": [
+      "API Key ID + Secret (Header `Authorization: Key KEY_ID:KEY_SECRET`)",
+      "CLI interactive login (`higgsfield auth login`)"
+    ],
+    "self_serve": "Self-Serve (Developers can sign up and generate API credentials in the Higgsfield Console; CLI package `@higgsfield/cli` installs via npm)",
+    "api_surface": "REST API (`api.higgsfield.ai/requests`), CLI toolchain (`@higgsfield/cli`), agentic skills integration",
+    "buildability_verdict": "Build Ready (Dual access: REST API with header auth for backend servers and interactive CLI for local agents)",
+    "docs_url": "https://higgsfield.ai"
+  },
+  {
+    "id": 98,
+    "name": "Mermaid CLI",
+    "category": "AI, Research and Media-native",
+    "hint": "github.com/mermaid-js/mermaid-cli",
+    "description": "Command-line interface (`mmdc`) for Mermaid diagramming that compiles text diagram syntax into SVG, PNG, or PDF.",
+    "auth_methods": [
+      "No Auth (Open-source Node.js CLI tool)"
+    ],
+    "self_serve": "Self-Serve (100% free open-source tool; install via `npm install -g @mermaid-js/mermaid-cli` or run via `npx mmdc`)",
+    "api_surface": "Local command-line tool / Node library; takes `.mmd` diagram files and renders raster/vector graphical outputs",
+    "buildability_verdict": "Build Ready via Local Shell / Execution Tool (Zero authentication; instant agent tool wrapper for visual diagrams)",
+    "docs_url": "https://github.com/mermaid-js/mermaid-cli"
+  },
+  {
+    "id": 99,
+    "name": "YouTube Transcript",
+    "category": "AI, Research and Media-native",
+    "hint": "transcriptapi.com",
+    "description": "API service for extracting transcripts, subtitles, and chapter markers from YouTube videos at scale.",
+    "auth_methods": [
+      "API Key (Header `Authorization: Bearer ...` or `x-api-key`)"
+    ],
+    "self_serve": "Self-Serve (Free tier available with introductory API credits; instant API key generation at transcriptapi.com)",
+    "api_surface": "REST API (`/api/transcript?video_id=...`), clean JSON transcript segments with timestamps and language codes",
+    "buildability_verdict": "Build Ready (Instant self-serve API key; solved reliable alternative to fragile client-side scraping)",
+    "docs_url": "https://transcriptapi.com"
+  },
+  {
+    "id": 100,
+    "name": "Grain",
+    "category": "AI, Research and Media-native",
+    "hint": "grain.com (meeting notes)",
+    "description": "AI-powered meeting recorder and intelligence tool that captures, summarizes, and automates CRM sync for team calls.",
+    "auth_methods": [
+      "API Token (Bearer)",
+      "OAuth2",
+      "Zapier / Webhook triggers"
+    ],
+    "self_serve": "Self-Serve (Free plan available; API tokens generated in Settings > Integrations / Developer)",
+    "api_surface": "REST API covering recordings, highlights, stories, transcripts, customer intelligence, and webhooks",
+    "buildability_verdict": "Build Ready (Self-serve token access and clear JSON meeting summaries make toolkit development straightforward)",
+    "docs_url": "https://grain.com"
+  }
+]

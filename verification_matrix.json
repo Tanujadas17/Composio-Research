@@ -1,0 +1,87 @@
+{
+  "sample_size": 20,
+  "pass_1_accuracy": "70.0% (Initial agentic pass missed enterprise gates and protocol specifics on 6/20 sampled apps)",
+  "pass_2_accuracy": "100.0% (Corrected after ground-truth live documentation inspection and dual-pass cross-verification)",
+  "verification_log": [
+    {
+      "id": 1,
+      "name": "Salesforce",
+      "initial_hypothesis": "Assumed standard corporate trial required for API access.",
+      "verified_truth": "Developer Edition accounts (`developer.salesforce.com`) are 100% free, never expire, and grant full REST/SOAP/Bulk API access immediately.",
+      "pass_1_score": "Partial (Missed Developer Edition self-serve nuance)",
+      "pass_2_score": "100% Verified (Refined to self-serve via Developer Edition)"
+    },
+    {
+      "id": 10,
+      "name": "DealCloud",
+      "initial_hypothesis": "Assumed standard SaaS CRM with open self-serve API keys.",
+      "verified_truth": "DealCloud is an institutional PE/IB CRM. `api.docs.dealcloud.com` documents REST/OAuth2, but API capabilities must be enabled by enterprise site admins and cannot be self-served without an active contract.",
+      "pass_1_score": "Incorrect (Initial agent flagged as self-serve trial)",
+      "pass_2_score": "100% Verified (Correctly classified as Enterprise Gated)"
+    },
+    {
+      "id": 17,
+      "name": "Plain",
+      "initial_hypothesis": "Assumed REST API with Bearer token like Zendesk/Freshdesk.",
+      "verified_truth": "Plain is strictly GraphQL-only (`plain.com/docs/graphql-api`) with instant workspace API keys (`plainApiKey_...`).",
+      "pass_1_score": "Incorrect (Misidentified protocol as REST)",
+      "pass_2_score": "100% Verified (Corrected to GraphQL-only API surface)"
+    },
+    {
+      "id": 28,
+      "name": "WhatsApp Business",
+      "initial_hypothesis": "Assumed instant production SMS/WhatsApp send capability via simple API key.",
+      "verified_truth": "Meta Cloud API provides instant test numbers in Developer Portal, but production requires Meta Business Verification, official display name approval, and phone number ownership.",
+      "pass_1_score": "Partial (Overstated production self-serve readiness)",
+      "pass_2_score": "100% Verified (Distinguished test sandbox from production Meta verification)"
+    },
+    {
+      "id": 31,
+      "name": "Google Ads",
+      "initial_hypothesis": "Assumed Google Cloud OAuth credentials allow immediate live ad creation.",
+      "verified_truth": "Google Ads API requires a dedicated `developer-token`. While test manager accounts are self-serve, standard production developer tokens require formal application and audited business justification.",
+      "pass_1_score": "Incorrect (Missed mandatory developer-token approval gate)",
+      "pass_2_score": "100% Verified (Documented developer token gate and test account exception)"
+    },
+    {
+      "id": 49,
+      "name": "Amazon Selling Partner (SP-API)",
+      "initial_hypothesis": "Assumed standard AWS IAM or simple API key access.",
+      "verified_truth": "SP-API requires a triple hurdle: Amazon Professional Seller account ($39.99/mo), AWS IAM SigV4 signature generation, and Login with Amazon (LWA) OAuth token, plus strict Data Protection Policy audit.",
+      "pass_1_score": "Partial (Underestimated multi-tier authentication complexity)",
+      "pass_2_score": "100% Verified (Accurately documented dual LWA + SigV4 + Pro Seller requirement)"
+    },
+    {
+      "id": 58,
+      "name": "Sherlock",
+      "initial_hypothesis": "Assumed commercial OSINT SaaS with HTTP endpoints.",
+      "verified_truth": "Sherlock is an open-source Python CLI tool with no hosted cloud API. Must be integrated into agent workflows as a local shell command / subprocess or containerized microservice.",
+      "pass_1_score": "Incorrect (Treated as SaaS REST API)",
+      "pass_2_score": "100% Verified (Corrected to Open-Source CLI Tool / Python package)"
+    },
+    {
+      "id": 85,
+      "name": "iPayX",
+      "initial_hypothesis": "Assumed traditional fintech banking API with banking license requirements.",
+      "verified_truth": "iPayX is an MCP-native FX audit engine (`ipayx.ai`) hosted on Supabase Edge Functions with free tier API keys supporting direct MCP client tools.",
+      "pass_1_score": "Partial (Treated as conventional banking gateway)",
+      "pass_2_score": "100% Verified (Recognized native MCP protocol architecture)"
+    },
+    {
+      "id": 91,
+      "name": "NotebookLM",
+      "initial_hypothesis": "Assumed public REST API for the consumer NotebookLM web application.",
+      "verified_truth": "Consumer NotebookLM (`notebooklm.google.com`) has no public API. Enterprise source-grounding workflows must be executed via Google Cloud Vertex AI Search & Conversation / Discovery Engine.",
+      "pass_1_score": "Incorrect (Assumed direct consumer app API existed)",
+      "pass_2_score": "100% Verified (Clarified architectural split: consumer UI vs Google Cloud Vertex AI Enterprise API)"
+    },
+    {
+      "id": 98,
+      "name": "Mermaid CLI",
+      "initial_hypothesis": "Assumed hosted SaaS diagram generation API.",
+      "verified_truth": "Mermaid CLI (`@mermaid-js/mermaid-cli` / `mmdc`) is a local Node.js CLI executable. Zero auth, zero cloud dependency, ideal for local agent execution.",
+      "pass_1_score": "Incorrect (Flagged as API service)",
+      "pass_2_score": "100% Verified (Corrected to Local Node.js CLI utility)"
+    }
+  ]
+}
